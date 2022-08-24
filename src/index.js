@@ -1,0 +1,13 @@
+import './scss/base.scss';
+import './js/fetchDecorator';
+import './js/refs';
+import './js/pagination';
+import './js/movieModal';
+import './js/menu';
+import './js/loginModal';
+import './js/registerModal';
+import './js/search_film';
+import './js/topFilms';
+import './js/team_Modal';
+import './js/fb/main_fb';
+import './js/darkTheme';

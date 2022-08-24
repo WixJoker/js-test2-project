@@ -1,0 +1,348 @@
+.movieBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  overflow-y: scroll;
+
+  &.movieIsHidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+body.movieModalOpened {
+  overflow: hidden;
+}
+
+.movieModal {
+  background: $color_white;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0) scale(1);
+  width: 280px;
+  height: auto;
+  padding: 50px 20px 0 20px;
+
+  @media screen and (min-width: 768px) {
+    width: 618px;
+    padding: 40px 30px 0 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    height: auto;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 882px;
+    height: auto;
+    padding: 50px 30px 0 30px;
+  }
+}
+
+.movieModalVideoContainer {
+  background: $color_white;
+  margin-right: -20px;
+  margin-left: -20px;
+  margin-top: 10px;
+  @media screen and (min-width: 768px) {
+    margin-right: -30px;
+    margin-left: -30px;
+  }
+  @media screen and (min-width: 1024px) {
+    margin-right: -30px;
+    margin-left: -30px;
+  }
+}
+.accordion-button:focus {
+  border-color: transparent;
+  outline: 0;
+  box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+  color: $color_white;
+  background-color: $color_orange;
+}
+
+.accordion-button:not(.collapsed)::after {
+  content: none;
+}
+.accordion-button::after {
+  content: none;
+}
+.accordion-button {
+  display: inline-block;
+  text-align: center;
+}
+.accordion-body {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.trailer {
+  width: 80%;
+  margin: auto;
+  display: block;
+
+  @media screen and (min-width: 1024px) {
+    height: 300px;
+  }
+}
+
+.btn-close-movieModal {
+  padding: 0;
+  margin-top: 10px;
+  margin-right: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: none;
+}
+
+.movieModalX {
+  font-size: 23px;
+  color: $color_black;
+  &:hover {
+    color: $color_orange;
+  }
+}
+.movieModalContainerDataBtn {
+  width: 112px;
+  height: 44px;
+  background: none;
+  color: $color_black;
+  font-size: 12px;
+  border-color: $color_black;
+  margin-top: 15px;
+  &:hover,
+  &:focus {
+    background: $color_orange;
+    color: $color_white;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 125px;
+    height: 44px;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 136px;
+    height: 44px;
+  }
+}
+
+.movieModalContainerData > button:first-of-type {
+  margin-right: 10px;
+}
+.movieModalContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.movieModalContainerPoster,
+.movieModalContainerData {
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: 264px;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 396px;
+  }
+}
+.movieModalContainerData {
+  margin-top: 30px;
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+  }
+}
+
+.movieModalContainerDataStatItemResult {
+  line-height: 14px;
+  padding-bottom: 10px;
+}
+.movieVotes {
+  background: $color_light_grey;
+  color: $color_black;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 36px;
+  height: 16px;
+  &:hover {
+    background: $color_orange;
+    color: $color_white;
+  }
+}
+
+.movieModalContainerDataAbout,
+.movieModalContainerDataStatItemName,
+.movieModalContainerDataAboutHeader,
+.movieModalContainerDataStatItemResult {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.movieModalContainerDataAbout {
+  line-height: 20px;
+}
+
+.movieModalContainerDataStatItemName {
+  width: 108px;
+  line-height: 16px;
+  color: #8c8c8c;
+  padding-bottom: 10px;
+  @media screen and (min-width: 1024px) {
+    width: 152px;
+  }
+}
+
+.movieModalContainerDataAboutHeader {
+  margin-top: 15px;
+  line-height: 16px;
+}
+
+.movieModalContainerDataH1 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0;
+  text-align: left;
+  margin-bottom: 15px;
+  @media screen and (min-width: 768px) {
+    line-height: 23px;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+
+.movieModalContainerPoster {
+  img {
+    border-radius: 5px;
+    display: block;
+    max-width: 100%;
+    height: 356px;
+    margin: auto;
+    @media screen and (min-width: 768px) {
+      height: 373px;
+    }
+    @media screen and (min-width: 1024px) {
+      height: 477px;
+    }
+  }
+}
+
+.movieModalVideoContainer,
+.movieModalReviewsContainer {
+  background: $color_white;
+  margin-right: -20px;
+  margin-left: -20px;
+  margin-top: 0;
+  @media screen and (min-width: 768px) {
+    margin-right: -30px;
+    margin-left: -30px;
+  }
+  @media screen and (min-width: 1024px) {
+    margin-right: -30px;
+    margin-left: -30px;
+  }
+}
+.accordion-button:focus {
+  border-color: transparent;
+  outline: 0;
+  box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+  color: $color_white;
+  background-color: $color_orange;
+}
+
+.accordion-button:not(.collapsed)::after {
+  content: none;
+}
+.accordion-button::after {
+  content: none;
+}
+.accordion-button {
+  display: inline-block;
+  text-align: center;
+}
+.accordion-body {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.trailer {
+  width: 80%;
+  margin: auto;
+  display: block;
+
+  @media screen and (min-width: 1024px) {
+    height: 300px;
+  }
+}
+.accordion {
+  border-bottom: 1px solid $color_light_grey;
+}
+
+.movieModalReviewsContainer {
+  .reviewContent {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-align: left;
+    overflow: hidden;
+    height: 40px;
+  }
+  //style to see all text of comment
+  .reviewContentAll {
+    height: auto;
+  }
+  //style to hide link if comment is short
+  .moretoLoad {
+    visibility: hidden;
+    color: $color_orange;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  //link to be visible is content of comment is big
+  .moreNeeded {
+    visibility: visible;
+  }
+  .author {
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  .bi-person {
+    font-size: 25px;
+    color: $color_orange;
+  }
+  .dated {
+    font-style: italic;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: $color_grey;
+  }
+  .reviewAvatar {
+    width: 35px;
+    height: 40px;
+    display: inline-block;
+  }
+}
+.movie-modal-span {
+  color: green;
+}

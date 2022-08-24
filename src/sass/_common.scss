@@ -1,1 +1,32 @@
-@import '~node_modules/modern-normalize/modern-normalize.css';
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  font-family: $font_roboto;
+  .containerX {
+    margin: auto;
+    padding: 0 20px 0 20px;
+    width: 100%;
+    @media screen and (min-width: 480px) {
+      width: 480px;
+      padding: 0 20px 0 20px;
+    }
+    @media screen and (min-width: 768px) {
+      width: 768px;
+      padding: 0 75px 0 75px;
+    }
+    @media screen and (min-width: 1024px) {
+      width: 1024px;
+      padding: 0 71px 0 71px;
+    }
+  }
+}
+ul {
+  list-style: none;
+}
